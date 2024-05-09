@@ -1,0 +1,9 @@
+pinecone-client
+mysql-connector-python
+python-dotenv
+streamlit
+langchain
+google-generativeai
+langchain_google_genai
+sentence-transformers
+pymongo
