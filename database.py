@@ -4,7 +4,6 @@ import os
 import re
 from numpy import dot
 from numpy.linalg import norm
-from datetime import datetime
 
 def fetch_and_embed_candidates(user_question):
     # Parse the user's question
