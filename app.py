@@ -50,17 +50,17 @@ def process_query(query):
     # Check if any candidates were fetched
     if candidates:
         # Display fetched candidates
-        st.write("Fetched Candidates")
+        st.write("Fetched Candidates: ")
         for candidate in candidates:
             st.write(f"Name: {candidate['name']}")
-            st.write(f"Name: {candidate['skillName']}")
-            st.write(f"Name: {candidate['description']}")
-            st.write(f"Name: {candidate['startDate']}")
-            st.write(f"Name: {candidate['endDate']}")
-            st.write(f"Name: {candidate['fullTimeSalary']}")
-            st.write(f"Name: {candidate['fullTimeSalaryCurrency']}")
-            st.write(f"Name: {candidate['partTimeSalary']}")
-            st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
+            st.write(f"Skills: {candidate['skillName']}")
+            st.write(f"Brief: {candidate['description']}")
+            st.write(f"StartDate: {candidate['startDate']}")
+            st.write(f"EndDate: {candidate['endDate']}")
+            st.write(f"FTE Salary: {candidate['fullTimeSalary']}")
+            st.write(f"FTE Currency: {candidate['fullTimeSalaryCurrency']}")
+            # st.write(f"Name: {candidate['partTimeSalary']}")
+            # st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
     else:
         st.write("No candidates meet the criteria.")
 
