@@ -27,7 +27,7 @@ def main():
             st.session_state['query'] = query
 
     # Get user input
-    user_question = st.text_input("Ask a question to find engineers", key="user_question")
+    user_question = st.text_input("Ask a question to find engineers", value=st.session_state['query'], key="user_question")
 
     # Send button
     if st.button("Search"):
@@ -38,7 +38,6 @@ def main():
     if st.button("Clear"):
         st.session_state['query'] = None
         st.session_state['candidates'] = None
-        st.text_input("Ask a question to find engineers", value='', key="user_question")    
 
     # Process query
     if st.session_state['query']:
