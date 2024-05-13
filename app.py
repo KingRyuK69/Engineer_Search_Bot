@@ -37,7 +37,8 @@ def main():
     # Clear button
     if st.button("Clear"):
         st.session_state['query'] = None
-        st.session_state['candidates'] = None        
+        st.session_state['candidates'] = None
+        st.text_input("Ask a question to find engineers", value='', key="user_question")    
 
     # Process query
     if st.session_state['query']:
@@ -50,17 +51,6 @@ def process_query(query):
     # Check if any candidates were fetched
     if candidates:
         # Display fetched candidates
-        # st.write("Fetched Candidates: ")
-        # for candidate in candidates:
-        #     st.write(f"Name: {candidate['name']}")
-        #     st.write(f"Skills: {candidate['skillName']}")
-        #     st.write(f"Brief: {candidate['description']}")
-        #     st.write(f"StartDate: {candidate['startDate']}")
-        #     st.write(f"EndDate: {candidate['endDate']}")
-        #     st.write(f"FTE Salary: {candidate['fullTimeSalary']}")
-        #     st.write(f"FTE Currency: {candidate['fullTimeSalaryCurrency']}")
-        #     st.write(f"Name: {candidate['partTimeSalary']}")
-        #     st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
         for i, candidate in enumerate(candidates, 1):
             st.markdown(f"""
             **Candidate {i}**
