@@ -53,6 +53,14 @@ def process_query(query):
         st.write("Fetched Candidates")
         for candidate in candidates:
             st.write(f"Name: {candidate['name']}")
+            st.write(f"Name: {candidate['skillName']}")
+            st.write(f"Name: {candidate['description']}")
+            st.write(f"Name: {candidate['startDate']}")
+            st.write(f"Name: {candidate['endDate']}")
+            st.write(f"Name: {candidate['fullTimeSalary']}")
+            st.write(f"Name: {candidate['fullTimeSalaryCurrency']}")
+            st.write(f"Name: {candidate['partTimeSalary']}")
+            st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
     else:
         st.write("No candidates meet the criteria.")
 
