@@ -50,17 +50,30 @@ def process_query(query):
     # Check if any candidates were fetched
     if candidates:
         # Display fetched candidates
-        st.write("Fetched Candidates: ")
-        for candidate in candidates:
-            st.write(f"Name: {candidate['name']}")
-            st.write(f"Skills: {candidate['skillName']}")
-            st.write(f"Brief: {candidate['description']}")
-            st.write(f"StartDate: {candidate['startDate']}")
-            st.write(f"EndDate: {candidate['endDate']}")
-            st.write(f"FTE Salary: {candidate['fullTimeSalary']}")
-            st.write(f"FTE Currency: {candidate['fullTimeSalaryCurrency']}")
-            # st.write(f"Name: {candidate['partTimeSalary']}")
-            # st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
+        # st.write("Fetched Candidates: ")
+        # for candidate in candidates:
+        #     st.write(f"Name: {candidate['name']}")
+        #     st.write(f"Skills: {candidate['skillName']}")
+        #     st.write(f"Brief: {candidate['description']}")
+        #     st.write(f"StartDate: {candidate['startDate']}")
+        #     st.write(f"EndDate: {candidate['endDate']}")
+        #     st.write(f"FTE Salary: {candidate['fullTimeSalary']}")
+        #     st.write(f"FTE Currency: {candidate['fullTimeSalaryCurrency']}")
+        #     st.write(f"Name: {candidate['partTimeSalary']}")
+        #     st.write(f"Name: {candidate['partTimeSalaryCurrency']}")
+        for i, candidate in enumerate(candidates, 1):
+            st.markdown(f"""
+            **Candidate {i}**
+            - **Name:** {candidate['name']}
+            - **Skills:** {candidate['skillName']}
+            - **Brief:** {candidate['description']}
+            - **StartDate:** {candidate['startDate']}
+            - **EndDate:** {candidate['endDate']}
+            - **FTE Salary:** {candidate['fullTimeSalary']}
+            - **FTE Currency:** {candidate['fullTimeSalaryCurrency']}
+            - **Part Time Salary:** {candidate['partTimeSalary']}
+            - **Part Time Salary Currency:** {candidate['partTimeSalaryCurrency']}
+            """)
     else:
         st.write("No candidates meet the criteria.")
 
